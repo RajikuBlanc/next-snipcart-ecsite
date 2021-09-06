@@ -121,3 +121,44 @@ package.json
   }
 }
 ```
+
+## React-icon のインストール
+
+```bash
+npm install react-icons --save
+```
+
+## Styled-components のインストールと設定
+
+```bash
+npm install --save styled-components
+```
+
+Typescript
+
+```bash
+npm i --save-dev @types/styled-components
+```
+
+サーバーサイドでも動かすため
+
+```bash
+npm install --save-dev babel-plugin-styled-components
+```
+
+.babelrc をルートに作成
+
+```json
+{
+  "presets": ["next/babel"],
+  "plugins": [
+    [
+      "babel-plugin-styled-components",
+      {
+        "ssr": true,
+        "displayName": true
+      }
+    ]
+  ]
+}
+```
